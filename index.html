@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Math 2026 - การแข่งขันวิชาการระดับประเทศ</title>
+    
+    <!-- เรียกใช้ Tailwind CSS ผ่าน CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <!-- ฟอนต์สไตล์ Google Sans (Plus Jakarta Sans + Noto Sans Thai) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Material Symbols Rounded ไอคอนสไตล์ Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+
+    <style>
+        body { font-family: 'Google Sans', 'Plus Jakarta Sans', 'Noto Sans Thai', sans-serif; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* แอนิเมชันสำหรับกล่องแม่ตรงกลาง ย่อลงกึ่งกลางจอแบบสมูทนุ่มนวลที่สุด */
+        .apple-container-smooth {
+            transition: transform 1.3s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+    </style>
+</head>
+<!-- พื้นหลังสีขาวล้วน 100% ไร้ขอบ คลีนพรีเมียม -->
+<body class="bg-white text-[#29343c] antialiased min-h-screen flex flex-col overflow-x-hidden">
+
+    <!-- ========================================== -->
+    <!-- 1. เมนูบนสุด (Navbar) - ขาวคลีน ไร้ขอบ -->
+    <!-- ========================================== -->
+    <nav class="w-full bg-white/90 backdrop-blur-md sticky top-0 z-50 opacity-0 animate-[fadeIn_0.8s_ease-out_1.8s_forwards]">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-xl font-extrabold tracking-tight text-[#29343c]">
+                SUPER<span class="text-[#fd5051]">MATH</span> 2026
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-[#29343c]/70">
+                <a href="#" class="hover:text-[#fd5051] transition-colors">หน้าแรก</a>
+                <a href="#" class="hover:text-[#fd5051] transition-colors">ติดตามการแข่งขัน</a>
+                <a href="#" class="hover:text-[#fd5051] transition-colors">ใบเสร็จรับเงิน</a>
+                
+                <!-- 💡 ปรับปุ่มเข้าสู่ระบบให้เป็น "แถบเส้นใต้ข้อความ" สีสดแบบในรูปเรฟเฟอเรนซ์ ไม่ถมสีกล่อง -->
+                <a href="URL_GAS_LOGIN" class="relative py-2 text-[#29343c] font-bold text-sm tracking-wide transition-all group flex items-center gap-1">
+                    <span class="material-symbols-rounded text-base text-[#fd5051]">connect_without_contact</span> 
+                    ติดต่อแอดมิน
+                    <!-- แถบเส้นด้านล่างที่จะแสดงอย่างคมชัดและพรีเมียมตามแบบเป๊ะๆ -->
+                    <span class="absolute bottom-0 left-0 w-full h-[3px] bg-[#fd5051] rounded-full transition-transform duration-300 origin-left group-hover:scale-x-110"></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- 2. ส่วนหัวแบบภาพ Cinematic พรีเมียมเต็มจอ (รูปจากลิงก์ที่ระบุ) -->
+    <!-- ========================================== -->
+    <header class="w-full relative h-[450px] bg-white flex items-center justify-center overflow-hidden select-none">
+        
+        <!-- กล่องแม่คุมกลุ่มข้อความตรงกลางทั้งหมด (ล็อกอยู่กึ่งกลางจอ) -->
+        <div id="intro-container" class="absolute inset-0 m-auto h-fit w-full max-w-5xl px-6 z-40 text-center apple-container-smooth flex flex-col items-center justify-center origin-center">
+            
+            <!-- 2.1 Badge มินิมอล -->
+            <div class="inline-flex items-center gap-2 bg-white text-[#29343c] text-xs font-extrabold px-4 py-1.5 rounded-full opacity-0 animate-[fadeIn_0.6s_ease-out_0.2s_forwards] shadow-xs mb-6 border border-slate-100">
+                <span class="material-symbols-rounded text-base text-[#fd5051]">trophy</span> Songkran Crossword Family
+            </div>
+            
+            <!-- 2.2 หัวข้อหลักตอนเปิดตัว -->
+            <h1 class="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight text-[#29343c] leading-none">
+                SUPER <span class="text-[#fd5051]">MATH</span> 2026
+            </h1>
+            
+            <!-- 2.3 รายละเอียดงานแข่งขัน -->
+            <div class="space-y-4 mt-6 opacity-0 animate-[fadeIn_0.8s_ease-out_0.4s_forwards]">
+                <p class="text-xl md:text-3xl text-[#fd5051] font-extrabold tracking-wide">
+                    การแข่งขันวิชาการระดับประเทศ
+                </p>
+                <p class="text-base md:text-lg text-[#29343c]/80 font-medium max-w-2xl mx-auto leading-relaxed">
+                    รายการ โรบินสันไลฟ์สไตล์ สกลนคร ชิงความเป็นเลิศด้านคณิตศาสตร์ระดับประเทศ <br class="hidden md:inline">
+                    <span class="text-white font-bold block mt-4 text-base md:text-xl bg-[#29343c] inline-block px-6 py-2.5 rounded-full shadow-xs">
+                        ชิงถ้วยเกียรติยศ นายอนุทิน ชาญวีรกูล นายกรัฐมนตรี
+                    </span>
+                </p>
+            </div>
+
+            <!-- 2.4 ปุ่มกดเลื่อนลงด้านล่าง สีเด่น #fd5051 -->
+            <div id="intro-btn" class="mt-10 opacity-0 transition-all duration-700 transform translate-y-4">
+                <a href="#apps-section" class="bg-[#fd5051] hover:opacity-95 text-white font-bold px-10 py-3.5 rounded-full shadow-md transition-all inline-block hover:-translate-y-0.5 text-base flex items-center gap-2">
+                    เริ่มต้นใช้งานระบบ <span class="material-symbols-rounded animate-bounce">arrow_downward</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- 3. ส่วนบล็อกเลือกแอปพลิเคชัน (ขาวสะอาด ไร้ขอบ) -->
+    <!-- ========================================== -->
+    <main id="apps-section" class="max-w-7xl mx-auto px-6 py-24 w-full flex-grow opacity-0 animate-[fadeIn_1s_ease-out_2s_forwards]">
+        <div class="text-center max-w-xl mx-auto mb-20 space-y-2">
+            <h2 class="text-3xl font-black tracking-tight text-[#29343c]">เมนูระบบแอปพลิเคชัน</h2>
+            <p class="text-sm text-[#29343c]/60 font-medium">กรุณาเลือกบริการคุมงานแข่งหรือตรวจสอบข้อมูลตามสิทธิ์ของคุณ</p>
+            <div class="w-12 h-1 bg-[#fd5051] mx-auto rounded-full mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <!-- แอป 1 -->
+            <div class="bg-white rounded-2xl p-8 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                <div>
+                    <div class="w-12 h-12 bg-slate-50 text-[#fd5051] rounded-full flex items-center justify-center mb-6 group-hover:bg-[#fd5051] group-hover:text-white transition-colors">
+                        <span class="material-symbols-rounded text-2xl">monitoring</span>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-[#29343c] mb-2">ติดตามการแข่งขัน (Real-time)</h3>
+                    <p class="text-[#29343c]/60 text-sm leading-relaxed mb-8 font-medium">ระบบอัปเดตสายแข่งขัน คะแนนเรียลไทม์ และผลการแข่งขัน Guess mode</p>
+                </div>
+                <a href="URL_GAS_USER_OR_ADMIN" class="w-full bg-slate-50 group-hover:bg-[#fd5051] text-[#29343c] group-hover:text-white text-center py-3.5 rounded-full font-bold text-xs tracking-wider transition-all">
+                    เข้าสู่ระบบผู้เยี่ยมชม
+                </a>
+            </div>
+
+            <!-- แอป 2 -->
+	 <div class="bg-white rounded-2xl p-8 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                <div>
+                    <div class="w-12 h-12 bg-slate-50 text-[#fd5051] rounded-full flex items-center justify-center mb-6 group-hover:bg-[#fd5051] group-hover:text-white transition-colors">
+                        <span class="material-symbols-rounded text-2xl">person_search</span>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-[#29343c] mb-2">เข้าสู่ระบบ Master Scorecard Online</h3>
+                    <p class="text-[#29343c]/60 text-sm leading-relaxed mb-8 font-medium">ระบบ Master Scorecard Online สำหรับผู้แข่งขันระดับ มัธยมศึกษาตอนปลาย และรุ่น Super (A-Math ม.ปลาย, Crossword ม.ปลาย,ม คำคม มัธยม,  Amath Super และ Crossoors Super โปรดดู user password ในบัตรนักกีฬา หรือคลิกที่ลิ้งตรวจสอบรายชื่อ</p>
+                </div>
+                <a href="URL_CHECK_INFO" class="w-full bg-slate-50 group-hover:bg-[#fd5051] text-[#29343c] group-hover:text-white text-center py-3.5 rounded-full font-bold text-xs tracking-wider transition-all">
+                    เข้าสู้ระบบผู้เข้าแข่งขัน
+                </a>
+            </div>
+
+            
+
+            <!-- แอป 3 -->
+           <div class="bg-white rounded-2xl p-8 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                <div>
+                    <div class="w-12 h-12 bg-slate-50 text-[#fd5051] rounded-full flex items-center justify-center mb-6 group-hover:bg-[#fd5051] group-hover:text-white transition-colors">
+                        <span class="material-symbols-rounded text-2xl">receipt_long</span>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-[#29343c] mb-2">ระบบขอรับใบเสร็จ</h3>
+                    <p class="text-[#29343c]/60 text-sm leading-relaxed mb-8 font-medium">กรอกข้อมูล ออกเอกสารการเงิน และดาวน์โหลดใบเสร็จรับเงินออนไลน์ของผู้เข้าร่วมแข่งขัน สามารถเข้าดู ข้อมูล User password ได้ที่ลิ้งนี้</p>
+                </div>
+                <a href="https://kunlada-d.github.io/Registrations/" class="w-full bg-slate-50 group-hover:bg-[#fd5051] text-[#29343c] group-hover:text-white text-center py-3.5 rounded-full font-bold text-xs tracking-wider transition-all">
+                    จัดการใบเสร็จ/ดูข้อมูลการสมัคร
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ========================================== -->
+    <!-- 4. ส่วนท้ายสุด (Footer) -->
+    <!-- ========================================== -->
+    <footer class="w-full bg-white border-t border-slate-50 py-8 text-center text-xs text-[#29343c]/40 font-medium">
+        <p>© 2026 All rights reserved. Songkran Crossword Family</p>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- 5. สคริปต์ควบคุมการหดตัวรวมกันเป็นกลุ่มก้อนเดียวอยู่ที่กึ่งกลางจอ -->
+    <!-- ========================================== -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const container = document.getElementById('intro-container');
+                const btn = document.getElementById('intro-btn');
+
+                // 1. ตรึงกล่องให้อยู่กึ่งกลางหน้าจอถาวร
+                container.classList.add('inset-0', 'm-auto');
+
+              
+                container.style.transform = "scale(0.75)";
+
+                // 3. แสดงปุ่มกดเข้าสู่ระบบแอปด้านล่างตามขึ้นมา
+                setTimeout(() => {
+                    btn.classList.remove('opacity-0', 'translate-y-4');
+                    btn.classList.add('opacity-100', 'translate-y-0');
+                }, 300);
+                
+            }, 1500); 
+        });
+    </script>
+
+</body>
+</html>
